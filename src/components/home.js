@@ -9,7 +9,7 @@ class Home extends Component {
     return (
       <div className="home">
         <div className="home-header">
-          <img src={require('../pkc.gif')} className="home-logo" />
+          <img src={require('../pkc.gif')} alt="logo" className="home-logo" />
           <h2>Welcome to React</h2>
         </div>
         <p className="home-intro">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>

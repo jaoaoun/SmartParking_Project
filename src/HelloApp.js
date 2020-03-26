@@ -2,7 +2,12 @@ import React from 'react'
 
 class HelloApp extends React.Component {
 	render() {
-		return <h1>Ahoy! React</h1>
+		return (
+			<div>
+			  <h1>Ahoy! React</h1>
+			  <p>{this.props.message}</p>
+			</div>
+		  )
 	}
 }
 

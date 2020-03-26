@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-         <HelloApp />
+         <HelloApp message="This is message sent from App" />
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>

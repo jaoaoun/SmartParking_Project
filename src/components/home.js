@@ -17,7 +17,7 @@ export default function HelloApp() {
   const { push } = useHistory()
 
   const handleClick = () => {
-    push('./Home.js')
+    push('/HelloApp')
   }
 
   return (

@@ -4,6 +4,10 @@ import HelloApp from './components/HelloApp'
 import Home from './components/Home'
 import Navigator from './components/Navigator'
 import First from './components/First'
+import SmartParking from './components/SmartParking'
+import Place1 from './components/Place1'
+import Place2 from './components/Place2'
+import AboutUs from './components/AboutUs'
 
 function App() {
   /* Hello */
@@ -13,8 +17,17 @@ function App() {
       <div>
         <Switch>
           <Route path="/">
+            <SmartParking />
+          </Route>
+          <Route path="/Place1">
+            <Place1 />
+          </Route>
+          <Route path="/Place2">
+            <Place2 />
+          </Route>
+          <Route path="/Navigator">
             <Navigator />
-          </Route>     
+          </Route>
           <Route path="/HelloApp">
             <HelloApp />
           </Route>
@@ -23,6 +36,9 @@ function App() {
           </Route>
           <Route path="/First">
             <First />
+          </Route>
+          <Route path="/AboutUs">
+            <AboutUs />
           </Route>
         </Switch>
       </div>

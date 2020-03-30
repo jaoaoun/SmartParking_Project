@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
-import HelloApp from './Home'
+// import HelloApp from './Home'
 import First from './First'
 
 const Home = () => <First/>

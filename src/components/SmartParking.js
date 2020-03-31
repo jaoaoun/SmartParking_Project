@@ -1,28 +1,17 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
-//import { NavLink } from 'react-router-dom'
-import '../components/SmartParking.css'
-import {
-  Nav,
-  Navbar,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
-  Button
-} from 'reactstrap'
 import Place1 from './Place1'
 import Place2 from './Place2'
+import { Nav, Navbar, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, NavbarText, Button } from 'reactstrap'
 
-const Home = () => <SmartParking />
+
 const P1 = () => <Place1 />
 const P2 = () => <Place2 />
 
 export const SmartParking = () => {
   return (
-    <div class="col-md5">
-      <Navbar color="light" light expand="md">
+    <div>
+      <Navbar color="dark" dark expand="md">
         <NavbarText className="mr-auto">SmartParking</NavbarText>
         <Nav navbar>
           <UncontrolledDropdown nav inNavbar>
@@ -38,16 +27,15 @@ export const SmartParking = () => {
         </Nav>
       </Navbar>
       <div className="App container">
-        <Route exact path="/" component={Home} />
+        {/* <Route exact path="/" component={Home} /> */}
         <Route path="/place1" component={P1} />
         <Route path="/place2" component={P2} />
       </div>
       <div>
-        <Button color="secondary" id="right-panel">
-          About us
-        </Button>
+          <Button>About Us</Button>
       </div>
     </div>
   )
 }
+
 export default SmartParking

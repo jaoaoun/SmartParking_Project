@@ -7,7 +7,7 @@ import First from './components/First'
 import SmartParking from './components/SmartParking'
 import Place1 from './components/Place1'
 import Place2 from './components/Place2'
-import AboutUs from './components/AboutUs'
+
 
 function App() {
   /* Hello */
@@ -37,9 +37,7 @@ function App() {
           <Route path="/First">
             <First />
           </Route>
-          <Route path="/AboutUs">
-            <AboutUs />
-          </Route>
+          
         </Switch>
       </div>
     </Router>

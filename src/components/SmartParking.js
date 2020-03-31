@@ -2,6 +2,7 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 import Place1 from './Place1'
 import Place2 from './Place2'
+import '../css/indexSP.css'
 import { Nav, Navbar, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, NavbarText, Button } from 'reactstrap'
 
 
@@ -32,7 +33,7 @@ export const SmartParking = () => {
         <Route path="/place2" component={P2} />
       </div>
       <div>
-          <Button>About Us</Button>
+          <Button className="btnAbout">About Us</Button>
       </div>
     </div>
   )

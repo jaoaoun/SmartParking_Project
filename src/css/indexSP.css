@@ -1,0 +1,9 @@
+.mr-auto {
+    font-size: 25px;
+  }
+
+.btnAbout{
+    position: absolute;
+    bottom: 5%;
+    right: 2%;
+}

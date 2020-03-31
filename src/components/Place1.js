@@ -5,7 +5,8 @@ class Place1 extends React.Component {
     return (
       <React.Fragment>
         <p>Hello Place1</p>
-        <img src={require('../pkc.gif')} alt="logo" className="place-logo" />
+        <img src={require('../pic/Grey.png')} alt="logo" className="car-logo" />
+        <img src={require('../pic/Grey.png')} alt="logo" className="car-logo" />
       </React.Fragment>
     )
   }

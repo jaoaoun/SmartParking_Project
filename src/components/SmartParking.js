@@ -5,16 +5,31 @@ import Place1 from './Place1'
 import Place2 from './Place2'
 import AboutUs from './AboutUs'
 import '../css/indexSP.css'
-import { Nav, Navbar, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, NavbarText, Button } from 'reactstrap'
-
+import { useHistory } from 'react-router'
+import {
+  Nav,
+  Navbar,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  NavbarText,
+  Button
+} from 'reactstrap'
 
 const P1 = () => <Place1 />
 const P2 = () => <Place2 />
-const AU = () => <AboutUs/>
+const AU = () => <AboutUs />
+
 
 
 export const SmartParking = () => {
 
+const { push } = useHistory()
+
+const handleClick = () => {
+  push('./AboutUs')
+}
   return (
     <div>
       <Navbar color="dark" dark expand="md">
@@ -39,10 +54,9 @@ export const SmartParking = () => {
         <Route path="/aboutus" component={AU} />
       </div>
       <div>
-          <Button className="btnAbout" href="/aboutus" >
-            About Us
-              </Button>
-              
+        <Button className="btnAbout" onClick={handleClick}>
+          About Us
+        </Button>
       </div>
     </div>
   )

@@ -7,6 +7,7 @@ import First from './components/First'
 import SmartParking from './components/SmartParking'
 import Place1 from './components/Place1'
 import Place2 from './components/Place2'
+import AboutUs from './components/AboutUs'
 
 
 function App() {
@@ -24,6 +25,9 @@ function App() {
           </Route>
           <Route path="/Place2">
             <Place2 />
+          </Route>
+          <Route path="/AboutUs">
+            <AboutUs/>
           </Route>
           <Route path="/Navigator">
             <Navigator />

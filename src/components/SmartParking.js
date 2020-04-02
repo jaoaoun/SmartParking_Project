@@ -1,21 +1,25 @@
-import React from 'react'
+import React , { useState } from 'react'
 import { Route } from 'react-router-dom'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import Place1 from './Place1'
 import Place2 from './Place2'
 import AboutUs from './AboutUs'
 import '../css/indexSP.css'
 import { useHistory } from 'react-router'
 import {
+  Collapse,
   Nav,
+  NavbarBrand,
   Navbar,
+  NavbarToggler,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  NavbarText,
   Button
 } from 'reactstrap'
+
+
 
 const P1 = () => <Place1 />
 const P2 = () => <Place2 />
@@ -25,6 +29,12 @@ const AU = () => <AboutUs />
 
 export const SmartParking = () => {
 
+ 
+    const [isOpen, setIsOpen] = useState(false);
+  
+    const toggle = () => setIsOpen(!isOpen);
+
+
 const { push } = useHistory()
 
 const handleClick = () => {
@@ -32,12 +42,15 @@ const handleClick = () => {
 }
   return (
     <div>
-      <Navbar color="dark" dark expand="md">
-        <NavbarText className="mr-auto">SmartParking</NavbarText>
-        <Nav navbar>
-          <UncontrolledDropdown nav inNavbar>
-            <DropdownToggle nav caret>
-              Placement
+
+      <Navbar color="dark" dark expand="md" >
+        <NavbarBrand color="dark" href="./SmartParking.js">SmartParking</NavbarBrand>
+        <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
+        <Nav navbar className="ml-auto"  >
+          <UncontrolledDropdown nav inNavbar >
+            <DropdownToggle nav caret >
+              Places
             </DropdownToggle>
             <DropdownMenu right>
               <DropdownItem href="/place1">Place 1</DropdownItem>
@@ -46,6 +59,7 @@ const handleClick = () => {
             </DropdownMenu>
           </UncontrolledDropdown>
         </Nav>
+        </Collapse>
       </Navbar>
       <div className="App container">
         {/* <Route exact path="/" component={Home} /> */}
@@ -53,6 +67,9 @@ const handleClick = () => {
         <Route path="/place2" component={P2} />
         <Route path="/aboutus" component={AU} />
       </div>
+      
+
+
       <div>
         <Button className="btnAbout" onClick={handleClick}>
           About Us
@@ -61,5 +78,6 @@ const handleClick = () => {
     </div>
   )
 }
+
 
 export default SmartParking

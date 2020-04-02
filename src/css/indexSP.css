@@ -1,12 +1,10 @@
-.mr-auto {
-    font-size: 25px;
-  }
-
 .btnAbout{
-    position: sticky;
-    bottom: 0%;
-    right: 0%;
-}
+  /* position: absolute;
+  /* top: 90%; */
+  /* position: bottom; */
+  float: right;
+  bottom: auto;
+} 
 
 .kmitl-logo{
   text-align: center;
@@ -17,13 +15,12 @@
 }
 
 .dev{
+  width: 100%;
+  padding: 5px;
+ 
   
-  width: 33%;
-  padding-left: 15px;
-  padding-right: 15px; 
+  /* padding-left: 15px;
+  padding-right: 15px;  */
   /* text-align: center;  */
 }
 
-.content{
-  text-align: center;
-}

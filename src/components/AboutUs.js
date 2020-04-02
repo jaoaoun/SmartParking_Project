@@ -1,43 +1,44 @@
 import React from 'react'
-import { Col, Row, Container, Button, Figure } from 'reactstrap'
+import { Col, Row, Container } from 'reactstrap'
 
 export const AboutUs = () => {
   return (
-    <React.Fragment>
+    <div>
+    {/* <React.Fragment> */}
       <Container fluid>
-        <Row >
+        <Row>
           <Col>
             <img src={require('../pic/kmi.jpg')} alt="logo" className="kmitl-logo" />
           </Col>
         </Row>
-        <Row>   
-          
-          <img src={require('../pic/Por.jpg')} alt="logo" className="dev"  />
-          
-          <img src={require('../pic/Nine.jpg')} alt="logo" className="dev" />
-          
-          
-          <img src={require('../pic/O.jpg')} alt="logo" className="dev" />
-         
-        </Row>
         <Row>
           <Col>
-          <p className="NameDev">NITHI SEMANUANG</p>
-          <p className="content">Hardware Developer</p>
+            <div className="NameDev">
+              <img src={require('../pic/Por.jpg')} alt="logo" className="dev" />
+              <p>NITHI SEMANUANG</p>
+              <p>Hardware Developer</p>
+            </div>
           </Col>
           <Col>
-          <p className="NameDev">PAPON PROMMOOL</p>
+            <div className="NameDev">
+              <img src={require('../pic/Nine.jpg')} alt="logo" className="dev" />
+              <p>PAPON PROMMOOL</p>
+              <p>Administration / Document Controller</p>
+            </div>
           </Col>
           <Col>
-          <p className="NameDev">SORAYUTH CHAROENSRISAN</p>
+            <div className="NameDev">
+              <img src={require('../pic/O.jpg')} alt="logo" className="dev" />
+              <p>SORAYUTH CHAROENSRISAN</p>
+              <p>Software Developer</p>
+            </div>
           </Col>
         </Row>
       </Container>
       {/* <p>About Us</p> */}
-    </React.Fragment>
+    {/* </React.Fragment> */}
+    </div>
   )
 }
 
 export default AboutUs
-
-

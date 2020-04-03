@@ -8,7 +8,7 @@ export const AboutUs = () => {
   const { push } = useHistory()
 
   const handleClick = () => {
-    push('./SmartParking')
+    push('./places')
   }
 
 

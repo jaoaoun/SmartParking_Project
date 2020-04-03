@@ -8,6 +8,7 @@ import SmartParking from './components/SmartParking'
 import Place1 from './components/Place1'
 import Place2 from './components/Place2'
 import AboutUs from './components/AboutUs'
+import Places from './components/Places'
 
 
 function App() {
@@ -17,7 +18,10 @@ function App() {
     <Router>
       <div>
         <Switch>
-          <Route path="/">
+        <Route path="/Places">
+            <Places />
+          </Route>
+          <Route path="/" >
             <SmartParking />
           </Route>
           <Route path="/Place1">

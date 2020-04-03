@@ -4,7 +4,16 @@
   /* position: bottom; */
   float: right;
   bottom: auto;
+  margin-bottom: 10px;
 } 
+
+.btn-back{
+  float: right;
+  bottom: auto;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+
 
 .kmitl-logo{
   text-align: center;
@@ -17,11 +26,8 @@
 .dev{
   width: 100%;
   padding: 5px;
+  height: 350px;
  
-  
-  /* padding-left: 15px;
-  padding-right: 15px;  */
-  /* text-align: center;  */
 }
 
 

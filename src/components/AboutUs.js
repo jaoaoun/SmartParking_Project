@@ -1,7 +1,17 @@
 import React from 'react'
-import { Col, Row, Container } from 'reactstrap'
+import { Col, Row, Container, Button} from 'reactstrap'
+import { useHistory } from 'react-router'
+
 
 export const AboutUs = () => {
+
+  const { push } = useHistory()
+
+  const handleClick = () => {
+    push('./SmartParking')
+  }
+
+
   return (
     <div>
     {/* <React.Fragment> */}
@@ -13,27 +23,30 @@ export const AboutUs = () => {
         </Row>
         <Row>
           <Col>
-            <div className="NameDev">
+            <div >
               <img src={require('../pic/Por.jpg')} alt="logo" className="dev" />
-              <p>NITHI SEMANUANG</p>
-              <p>Hardware Developer</p>
+              <p className="NameDev">NITHI SEMANUANG</p>
+              <p className="NameDev">Hardware Developer</p>
             </div>
           </Col>
           <Col>
-            <div className="NameDev">
+            <div >
               <img src={require('../pic/Nine.jpg')} alt="logo" className="dev" />
-              <p>PAPON PROMMOOL</p>
-              <p>Administration / Document Controller</p>
+              <p className="NameDev">PAPON PROMMOOL</p>
+              <p className="NameDev">Administration / Document Controller</p>
             </div>
           </Col>
           <Col>
-            <div className="NameDev">
+            <div >
               <img src={require('../pic/O.jpg')} alt="logo" className="dev" />
-              <p>SORAYUTH CHAROENSRISAN</p>
-              <p>Software Developer</p>
+              <p className="NameDev">SORAYUTH CHAROENSRISAN</p>
+              <p className="NameDev">Software Developer</p>
             </div>
           </Col>
         </Row>
+        <div>
+          <Button className="btn-back" onClick={handleClick}>Back</Button>
+        </div>
       </Container>
       {/* <p>About Us</p> */}
     {/* </React.Fragment> */}

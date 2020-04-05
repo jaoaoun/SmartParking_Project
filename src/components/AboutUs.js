@@ -8,7 +8,8 @@ export const AboutUs = () => {
   const { push } = useHistory()
 
   const handleClick = () => {
-    push('./places')
+    
+    push('./')
   }
 
 
@@ -44,9 +45,9 @@ export const AboutUs = () => {
             </div>
           </Col>
         </Row>
-        <div>
+        {/* <div>
           <Button className="btn-back" onClick={handleClick}>Back</Button>
-        </div>
+        </div> */}
       </Container>
       {/* <p>About Us</p> */}
     {/* </React.Fragment> */}

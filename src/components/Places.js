@@ -31,37 +31,66 @@ const AU = () => <AboutUs />
 
 
 export const Places = () => {
-    // const [isOpen, setIsOpen] = useState(false);
+
+    // const [btnSP, setBtnSP] = useState (true)
+    const [showPbar, setShowPbar] = useState(false)
+    const [isOpen, setIsOpen] = useState(false);
   
-    // const toggle = () => setIsOpen(!isOpen);
+    const toggle = () => setIsOpen(!isOpen);
+    const [showP, setShowP] = useState(true)
+    
+    const [showBtn, setShowBtn] = useState (true)
 
 
 const { push } = useHistory()
 
+
 const handleClick = () => {
+  setShowP(!showP) 
   push('./AboutUs')
+  setShowBtn(!showBtn)
+  // setBtnSP(!btnSP)
+  
+}
+
+const handleClick2 = () => {
+  setShowP(!showP)
+  push('./Place1.js')
+  setShowBtn(!showBtn)
+  setShowPbar(!showPbar)
+  // setBtnSP(btnSP:false)
+}
+
+const handleClick3 = () => {
+  setShowP(!showP)
+  push('./Place2.js')
+  setShowBtn(!showBtn)
+  setShowPbar(!showPbar)
+  // setBtnSP(!btnSP)
 }
 
   return (
-    <div>
+    <div >
 
       <Navbar color="dark" dark expand="md" >
         <NavbarBrand color="dark" href="/places">SmartParking</NavbarBrand>
-        {/* <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar> */}
-        {/* <Nav navbar className="ml-auto"  >
+        <NavbarToggler onClick={toggle} />
+        { showPbar &&
+        <Collapse isOpen={isOpen} navbar>
+        <Nav navbar className="ml-auto"  >
           <UncontrolledDropdown nav inNavbar >
             <DropdownToggle nav caret >
               Places
             </DropdownToggle>
             <DropdownMenu right>
-              <DropdownItem href="/place1">Place 1</DropdownItem>
+              <DropdownItem href="/Place1.js">Place 1</DropdownItem>
               <DropdownItem divider />
-              <DropdownItem href="/place2">Place 2</DropdownItem>
+              <DropdownItem href="/Place2.js">Place 2</DropdownItem>
             </DropdownMenu>
           </UncontrolledDropdown>
         </Nav>
-        </Collapse> */}
+        </Collapse>
+        }
       </Navbar>
       <div className="App container">
         {/* <Route exact path="/" component={Home} /> */}
@@ -69,34 +98,46 @@ const handleClick = () => {
         <Route path="/Place2.js" component={P2} /> 
         <Route path="/AboutUs" component={AU} />
       </div>
-      
-      <Container>
+      {/* { btnSP &&
+      <div>
+        <Button  onClick={() => setShowP(!showP) }>
+          Show Places
+        </Button>
+      </div>
+      } */}
+      {
+        showP &&
+      <Container >
           <Row>
           <Col> 
           <div>
-              <Link to="/Place1.js">
-              <img src={require('../pic/p1.jpg')} alt="logo" className="Place-logo" href="/Place1.js" />
-              </Link>
+              <button className="place-btn" onClick={handleClick2}>
+              <img src={require('../pic/p1.jpg')} alt="logo" className="Place-logo"  />
+              </button>
               <p>Place1</p>
           </div>
           </Col>
           <Col>
           <div>
-              <Link to="/Place2.js">
-                <img src={require('../pic/P2.jpg')} alt="logo" className="Place-logo" href="/Place2.js"/>
-              </Link>
+              <button className="place-btn" onClick={handleClick3}>
+                <img src={require('../pic/P2.jpg')} alt="logo" className="Place-logo" />
+              </button>
               <p>Place2</p>
           </div>
           </Col>
           </Row>
       </Container>
-
-
+      
+      }
+      {
+        showBtn &&
+      
       <div>
         <Button className="btnAbout" onClick={handleClick}>
           About Us
         </Button>
       </div>
+       }
     </div>
   
   )

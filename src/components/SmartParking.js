@@ -6,7 +6,7 @@ import Place2 from './Place2'
 import AboutUs from './AboutUs'
 import Places from './Places'
 import '../css/indexSP.css'
-import { useHistory, Redirect, Switch } from 'react-router'
+import { useHistory } from 'react-router'
 import {
   Collapse,
   Nav,
@@ -48,8 +48,6 @@ const handleClick = () => {
     
     <div>
 
-
-
       <Navbar color="dark" dark expand="md" >
         <NavbarBrand color="dark" href="/places">SmartParking</NavbarBrand>
         <NavbarToggler onClick={toggle} />
@@ -74,7 +72,7 @@ const handleClick = () => {
         <Route path="/Place2.js" component={P2} />
         <Route path="/AboutUs" component={AU} />
         <Route path="/places" component={PS} />
-        <Redirect from="/" to="/places" />  
+       
       
       </div>
       

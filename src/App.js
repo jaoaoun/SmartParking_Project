@@ -18,10 +18,10 @@ function App() {
     <Router>
       <div>
         <Switch>
-        <Route path="/Places">
+        <Route path="/">
             <Places />
           </Route>
-          <Route path="/" >
+          <Route path="/SmartParking" >
             <SmartParking />
           </Route>
           <Route path="/Place1">

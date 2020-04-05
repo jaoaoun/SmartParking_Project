@@ -1,8 +1,17 @@
 import React from 'react'
-import { Container, Row, Col } from 'reactstrap'
+import { 
+  Container, 
+  Row, 
+  Col,
+ 
+ } from 'reactstrap'
 
-class Place1 extends React.Component {
-  render() {
+ export const Place1 = () => {
+
+  
+
+
+  
     return (
       <React.Fragment>
         <Container>
@@ -68,6 +77,6 @@ class Place1 extends React.Component {
       </React.Fragment>
     )
   }
-}
+
 
 export default Place1

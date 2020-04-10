@@ -32,41 +32,42 @@ const AU = () => <AboutUs />
 
 export const Places = () => {
 
-    // const [btnSP, setBtnSP] = useState (true)
-    const [showPbar, setShowPbar] = useState(false)
+    //Navbar Places
+    const [showPlacesbar, setShowPlacesbar] = useState(false)
+    //Dropdownbar
     const [isOpen, setIsOpen] = useState(false);
-  
     const toggle = () => setIsOpen(!isOpen);
-    const [showP, setShowP] = useState(true)
-    
-    const [showBtn, setShowBtn] = useState (true)
+    //Place in home page
+    const [showPlace, setShowPlace] = useState(true)
+    //Button About Us in home page
+    const [showBtnAbout, setShowBtnAbout] = useState (true)
 
 
 const { push } = useHistory()
 
 
 const handleClick = () => {
-  setShowP(!showP) 
+  setShowPlace(false) 
   push('./AboutUs')
-  setShowBtn(!showBtn)
-  // setBtnSP(!btnSP)
+  setShowBtnAbout(false)
+  
   
 }
 
 const handleClick2 = () => {
-  setShowP(!showP)
   push('./Place1.js')
-  setShowBtn(!showBtn)
-  setShowPbar(!showPbar)
-  // setBtnSP(btnSP:false)
+  setShowPlace(false)
+  setShowBtnAbout(false)
+  setShowPlacesbar(true)
+  
 }
 
 const handleClick3 = () => {
-  setShowP(!showP)
   push('./Place2.js')
-  setShowBtn(!showBtn)
-  setShowPbar(!showPbar)
-  // setBtnSP(!btnSP)
+  setShowPlace(false)
+  setShowBtnAbout(false)
+  setShowPlacesbar(true)
+  
 }
 
   return (
@@ -75,7 +76,7 @@ const handleClick3 = () => {
       <Navbar color="dark" dark expand="md" >
         <NavbarBrand color="dark" href="/places">SmartParking</NavbarBrand>
         <NavbarToggler onClick={toggle} />
-        { showPbar &&
+        { showPlacesbar &&
         <Collapse isOpen={isOpen} navbar>
         <Nav navbar className="ml-auto"  >
           <UncontrolledDropdown nav inNavbar >
@@ -83,9 +84,9 @@ const handleClick3 = () => {
               Places
             </DropdownToggle>
             <DropdownMenu right>
-              <DropdownItem href="/Place1.js">Place 1</DropdownItem>
+              <DropdownItem onClick={handleClick2}>Place 1</DropdownItem>
               <DropdownItem divider />
-              <DropdownItem href="/Place2.js">Place 2</DropdownItem>
+              <DropdownItem onClick={handleClick3}>Place 2</DropdownItem>
             </DropdownMenu>
           </UncontrolledDropdown>
         </Nav>
@@ -106,7 +107,7 @@ const handleClick3 = () => {
       </div>
       } */}
       {
-        showP &&
+        showPlace &&
       <Container >
           <Row>
           <Col> 
@@ -130,7 +131,7 @@ const handleClick3 = () => {
       
       }
       {
-        showBtn &&
+        showBtnAbout &&
       
       <div>
         <Button className="btnAbout" onClick={handleClick}>

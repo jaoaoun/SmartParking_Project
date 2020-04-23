@@ -1,22 +1,39 @@
-import React from 'react'
+import React, { useEffect , useState} from 'react'
 import { 
   Container, 
   Row, 
-  Col,
- 
+  Col
  } from 'reactstrap'
+ import axios from "axios"
 
  export const Place1 = () => {
+    const [sensor,setSensor] = useState(null)
+    
+    useEffect(() => {
+      // let sensor = []
+      // firebase
+      //   .database()
+      //   .ref('Devices')
+      //   .on('value', (data)=>{
+      //     sensor = Object.values(data.val())
+      //   })
+      
 
-  
-
+      // checkSensor()
+      console.log('aouงง')
+    },[])
+    
+      // const checkSensor = async () => {
+      //   let Sensor = await axios.get(`http://127.0.0.1:3100/`);
+      //   console.log(Sensor,'aouงง')
+      // }    
 
   
     return (
-      <React.Fragment>
+      <div>
         <Container>
           <Row>
-            <h1 >Place1</h1> 
+            <h1 >Place1</h1>
           </Row>
           <Row>
             <Col sm={2}>
@@ -74,7 +91,7 @@ import {
             </Col>
           </Row>
         </Container>
-      </React.Fragment>
+      </div>
     )
   }
 

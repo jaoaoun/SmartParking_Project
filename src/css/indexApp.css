@@ -1,0 +1,54 @@
+.btnAbout{
+    /* position: absolute;
+    /* top: 90%; */
+    /* position: bottom; */
+    /* float: right;
+    bottom: auto;
+    margin-bottom: 10px; */
+    position: absolute;
+    right:    0;
+    bottom:   10px;
+  } 
+  
+  .btn-back{
+    float: right;
+    bottom: auto;
+    margin-bottom: 10px;
+    margin-left: 5px;
+  }
+  
+  
+  .kmitl-logo{
+    text-align: center;
+  }
+  
+  .NameDev{
+    text-align: center; 
+  }
+  
+  .dev{
+    width: 100%;
+    padding: 5px;
+    height: 350px;
+   
+  }
+  
+  
+  
+  
+  .roecar{
+    transform: rotate(-180deg);
+   
+  }
+  
+  .Place-logo{
+    width: 100%;
+    padding: 5px;
+    height: 350px;
+    margin-top: 20px;
+  }
+  
+  .place-btn{
+    background-color: white;
+    border: white;
+  }

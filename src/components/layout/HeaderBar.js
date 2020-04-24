@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import '../../css/indexApp.css'
 import { useHistory } from 'react-router'
+import { useLocation } from 'react-router-dom'
 import {
   Collapse,
   Nav,
@@ -22,53 +23,61 @@ import {
 
 
 export const HeaderBar = () => {
-  // //Navbar Places
-  // const [showPlacesbar, setShowPlacesbar] = useState(false)
-  // //Dropdownbar
-  // const [isOpen, setIsOpen] = useState(false)
-  // const toggle = () => setIsOpen(!isOpen)
+  
+  const { push } = useHistory()
+  const { location } = useLocation()
+  //Navbar Places
+  const [showPlacesbar, setShowPlacesbar] = useState(false)
+  //Dropdownbar
+  const [isOpen, setIsOpen] = useState(false)
+  const toggle = () => setIsOpen(!isOpen)
   //Place in home page
   const [showPlace, setShowPlace] = useState(false)
   //Button About Us in home page
-  //const [showBtnAbout, setShowBtnAbout] = useState(false)
+  const [showBtnAbout, setShowBtnAbout] = useState(null)
 
-  // useEffect(() => {
-  //   localStorage.clear()
-  //   var btnAboutUs = localStorage.getItem('setBtn')
-  //   if (!btnAboutUs) {
-  //     setShowBtnAbout(true)
-  //   }
-  // }, [])
+  useEffect(() => {
+    console.log('locaton',location)
+    // localStorage.removeItem('setBtn')
+    console.log('setBtn',localStorage.getItem('setBtn'))
+    if (localStorage.getItem('setBtn') == null) {
+      setShowBtnAbout(true)
+    } else {
+      setShowBtnAbout(false)
+      localStorage.removeItem('setBtn')
+    }
+    // {showBtnAbout: true} : localStorage.getItem('setBtn') == 'false' ? {showBtnAbout: false} : {showBtnAbout: true}
+  }, [])
 
-  const { push } = useHistory()
+  
 
-  // const AboutusClick = () => {
-  //   push('./AboutUs')
-  //   setShowPlace(false)
-  //   setShowBtnAbout(false)
-  // }
+  const AboutusClick = () => {
+    push('./AboutUs')
+    setShowBtnAbout(false)
+    localStorage.setItem('setBtn', false)
+  }
 
   const Place1Click = () => {
     push('./Place1')
-    //setShowPlacesbar(true)
+    setShowPlacesbar(true)
     setShowPlace(false)
-    //setShowBtnAbout(true)
+    setShowBtnAbout(true)
   }
 
   const Place2Click = () => {
     push('./Place2')
     setShowPlace(false)
-    //setShowBtnAbout(true)
-    //setShowPlacesbar(true)
+    setShowBtnAbout(true)
+    setShowPlacesbar(true)
   }
 
   return (
     <div >
 
       <Navbar color="dark" dark expand="md" >
-        <NavbarBrand color="dark" href="/places">SmartParking</NavbarBrand>
-        {/* <NavbarToggler onClick={toggle} /> */}
-        {/* { showPlacesbar &&
+        <NavbarBrand color="dark" href="/">SmartParking</NavbarBrand>
+        <NavbarToggler onClick={toggle} />
+        { showPlacesbar &&
         <Collapse isOpen={isOpen} navbar>
         <Nav navbar className="ml-auto"  >
           <UncontrolledDropdown nav inNavbar >
@@ -83,10 +92,10 @@ export const HeaderBar = () => {
           </UncontrolledDropdown>
         </Nav>
         </Collapse>
-        } */}
+        }
       </Navbar>
       
-      {/* {
+      {
         showBtnAbout &&
       
       <div>
@@ -94,7 +103,7 @@ export const HeaderBar = () => {
           About Us
         </Button>
       </div>
-       } */}
+       }
     </div>
   )
 }

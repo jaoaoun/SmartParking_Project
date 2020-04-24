@@ -28,7 +28,7 @@ export const HeaderplaceBar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => setIsOpen(!isOpen)
   //Place in home page
-  const [showPlace, setShowPlace] = useState(false)
+  const [showPlace, setShowPlace] = useState(localStorage)
   //Button About Us in home page
   const [showBtnAbout, setShowBtnAbout] = useState(false)
 
@@ -54,14 +54,14 @@ export const HeaderplaceBar = () => {
     push('./Place2')
     setShowPlace(false)
     //setShowBtnAbout(true)
-    setShowPlacesbar(true)
+    setShowPlacesbar(prev => ([...prev,true]))
   }
 
   return (
     <div >
 
       <Navbar color="dark" dark expand="md" >
-        <NavbarBrand color="dark" href="/places">SmartParking</NavbarBrand>
+        <NavbarBrand color="dark" href="/">SmartParking</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         { showPlacesbar &&
         <Collapse isOpen={isOpen} navbar>

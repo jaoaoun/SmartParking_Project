@@ -6,7 +6,9 @@ import Place1 from './components/page/Place1'
 import Place2 from './components/page/Place2'
 import AboutUs from './components/page/AboutUs'
 import HeaderBar from './components/layout/HeaderBar'
-
+import * as firebase from 'firebase'
+import { firebaseConfig } from './config'
+firebase.initializeApp(firebaseConfig)
 function App() {
   return (
     <Router>

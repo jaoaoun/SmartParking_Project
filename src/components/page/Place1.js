@@ -23,30 +23,30 @@ export const Place1 = () => {
         <Row>
           <h1>Place1</h1>
         </Row>
-        <Row>
-          <Col sm={2}>
-            <p>001</p>
-            <img src={require('../../img/Grey.png')} alt="logo" className="car-logo" />
+        <Row >
+          <Col sm={2}   >
+            <p className="No-car">001</p>
+            <img src={require('../../img/Grey.png')} alt="logo"  />
           </Col>
-          <Col sm={2}>
-            <p>002</p>
-            <img src={require('../../img/Grey.png')} alt="logo" className="car-logo" />
+          <Col sm={2}  >
+            <p className="No-car">002</p>
+            <img src={require('../../img/Grey.png')} alt="logo"  />
           </Col>
-          <Col sm={2}>
-            <p>003</p>
-            <img src={require('../../img/Grey.png')} alt="logo" className="car-logo" />
+          <Col sm={2} >
+            <p className="No-car">003</p>
+            <img src={require('../../img/Grey.png')} alt="logo"  />
           </Col>
-          <Col sm={2}>
-            <p>004</p>
-            <img src={require('../../img/Grey.png')} alt="logo" className="car-logo" />
+          <Col sm={2} >
+            <p className="No-car">004</p>
+            <img src={require('../../img/Grey.png')} alt="logo"  />
           </Col>
-          <Col sm={2}>
-            <p>005</p>
-            <img src={require('../../img/Grey.png')} alt="logo" className="car-logo" />
+          <Col sm={2} >
+            <p className="No-car">005</p>
+            <img src={require('../../img/Grey.png')} alt="logo"  />
           </Col>
-          <Col sm={2}>
-            <p>006</p>
-            <img src={require('../../img/Grey.png')} alt="logo" className="car-logo" />
+          <Col sm={2} >
+            <p className="No-car">006</p>
+            <img src={require('../../img/Grey.png')} alt="logo"  />
           </Col>
         </Row>
         <Row>
@@ -58,30 +58,30 @@ export const Place1 = () => {
         <Row>
           <p></p>
         </Row>
-        <Row>
-          <Col sm={2}>
+        <Row >
+          <Col sm={2} >
             <img src={require('../../img/Grey.png')} alt="logo" className="roecar" />
-            <p>007</p>
+            <p className="No-car">007</p>
           </Col>
-          <Col sm={2}>
+          <Col sm={2} >
             <img src={require('../../img/Grey.png')} alt="logo" className="roecar" />
-            <p>008</p>
+            <p className="No-car">008</p>
           </Col>
-          <Col sm={2}>
+          <Col sm={2} >
             <img src={require('../../img/Grey.png')} alt="logo" className="roecar" />
-            <p>009</p>
+            <p className="No-car">009</p>
           </Col>
-          <Col sm={2}>
+          <Col sm={2} >
             <img src={require('../../img/Grey.png')} alt="logo" className="roecar" />
-            <p>010</p>
+            <p className="No-car">010</p>
           </Col>
-          <Col sm={2}>
+          <Col sm={2} >
             <img src={require('../../img/Grey.png')} alt="logo" className="roecar" />
-            <p>011</p>
+            <p className="No-car">011</p>
           </Col>
-          <Col sm={2}>
+          <Col sm={2} >
             <img src={require('../../img/Grey.png')} alt="logo" className="roecar" />
-            <p>012</p>
+            <p className="No-car">012</p>
           </Col>
         </Row>
       </Container>

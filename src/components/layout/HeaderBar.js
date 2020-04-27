@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import '../../css/indexApp.css'
 import { useHistory } from 'react-router'
 import { useLocation } from 'react-router-dom'
@@ -26,22 +26,23 @@ export const HeaderBar = () => {
   //Button About Us in home page
   const [showBtnAbout, setShowBtnAbout] = useState(null)
 
-  useEffect(() => {
-    checkPage()
-  }, [location.pathname])
-  const checkPage = () => {
-    if (location.pathname == '/') {
+  const checkPage = useCallback(() => {
+    if (location.pathname === '/') {
       setShowBtnAbout(true)
       setShowPlacesbar(false)
-    } else if (location.pathname == '/AboutUs') {
+    } else if (location.pathname === '/AboutUs') {
       setShowBtnAbout(false)
       setShowPlacesbar(false)
     } else {
       setShowBtnAbout(true)
       setShowPlacesbar(true)
     }
-  }
+  }, [])
 
+  useEffect(() => {
+    checkPage()
+  }, [location.pathname])
+  
   const AboutusClick = () => {
     push('./AboutUs')
     setShowBtnAbout(false)

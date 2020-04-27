@@ -1,13 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import '../../css/indexApp.css'
 import { Container, Row, Col } from 'reactstrap'
 import * as firebase from 'firebase'
 
 export const Place1 = () => {
-  useEffect(() => {
-    fetchingSensor()
-  })
-
   const fetchingSensor = () => {
     firebase
       .database()
@@ -16,6 +12,10 @@ export const Place1 = () => {
         console.log(data.toJSON().Sensor)
       })
   }
+
+  useEffect(() => {
+    fetchingSensor()
+  })
 
   return (
     <div>

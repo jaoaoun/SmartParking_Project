@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import { Col, Row, Container, Button } from 'reactstrap'
+import React from 'react'
+import { Col, Row, Container} from 'reactstrap'
 import '../../css/indexApp.css'
 
 export const AboutUs = () => {

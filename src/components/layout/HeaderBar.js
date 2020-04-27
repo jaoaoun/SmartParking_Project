@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import '../../css/indexApp.css'
 import { useHistory } from 'react-router'
 import { useLocation } from 'react-router-dom'
@@ -23,8 +23,12 @@ export const HeaderBar = () => {
   //Dropdownbar
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => setIsOpen(!isOpen)
+
+  const [showPlace1, setShowPlace1] = useState(null)
+  const [showPlace2, setShowPlace2] = useState(null)
   //Button About Us in home page
   const [showBtnAbout, setShowBtnAbout] = useState(null)
+  const [namePlaces, setNamePlaces] = useState('Places')
 
   const checkPage = () => {
     if (location.pathname === '/') {
@@ -33,9 +37,16 @@ export const HeaderBar = () => {
     } else if (location.pathname === '/AboutUs') {
       setShowBtnAbout(false)
       setShowPlacesbar(false)
+    } else if (location.pathname === '/Place1') {
+      setShowBtnAbout(true)
+      setShowPlacesbar(true)
+      setNamePlaces('Place1')
+      setShowPlace2(true)
     } else {
       setShowBtnAbout(true)
       setShowPlacesbar(true)
+      setNamePlaces('Place2')
+      setShowPlace1(true)
     }
   }
 
@@ -52,12 +63,16 @@ export const HeaderBar = () => {
     push('./Place1')
     setShowPlacesbar(true)
     setShowBtnAbout(true)
+    setShowPlace1(false)
+    setShowPlace2(true)
   }
 
   const Place2Click = () => {
     push({ pathname: './Place2' })
     setShowBtnAbout(true)
     setShowPlacesbar(true)
+    setShowPlace1(true)
+    setShowPlace2(false)
   }
 
   return (
@@ -71,13 +86,12 @@ export const HeaderBar = () => {
           <Collapse isOpen={isOpen} navbar>
             <Nav navbar className="ml-auto">
               <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Places
+                <DropdownToggle nav caret className="ml-auto">
+                  {namePlaces}
                 </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem onClick={Place1Click}>Place 1</DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem onClick={Place2Click}>Place 2</DropdownItem>
+                <DropdownMenu right >
+                  {showPlace1 && <DropdownItem  onClick={Place1Click}>Place 1</DropdownItem>}
+                  {showPlace2 && <DropdownItem onClick={Place2Click}>Place 2</DropdownItem>}
                 </DropdownMenu>
               </UncontrolledDropdown>
             </Nav>

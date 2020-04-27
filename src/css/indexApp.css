@@ -52,3 +52,7 @@
     background-color: white;
     border: white;
   }
+  
+.dropdown-menu.dropdown-menu-right.show {
+    position: absolute;
+}

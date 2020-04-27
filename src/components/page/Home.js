@@ -25,7 +25,7 @@ export const Home = () => {
               <button className="place-btn" onClick={Place1Click}>
                 <img src={require('../../img/p1.jpg')} alt="logo" className="Place-logo" />
               </button>
-              <p>Place1</p>
+              <p align="center">Place1</p>
             </div>
           </Col>
           <Col>
@@ -33,7 +33,7 @@ export const Home = () => {
               <button className="place-btn" onClick={Place2Click}>
                 <img src={require('../../img/P2.jpg')} alt="logo" className="Place-logo" />
               </button>
-              <p>Place2</p>
+              <p align="center">Place2</p>
             </div>
           </Col>
         </Row>

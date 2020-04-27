@@ -1,22 +1,8 @@
-import React , {useEffect} from 'react'
-import { Col, Row, Container, Button} from 'reactstrap'
+import React, { useEffect } from 'react'
+import { Col, Row, Container, Button } from 'reactstrap'
 import '../../css/indexApp.css'
-import { useHistory } from 'react-router'
 
 export const AboutUs = () => {
-
-//   const { push } = useHistory()
-
-//   const handleClick = () => {
-    
-//     // push('./')
-//   }
-  
-  useEffect(() => {
-    //
-    
-  },[])
-
   return (
     <div>
       <Container>

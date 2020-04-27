@@ -53,6 +53,12 @@ export const Place1 = () => {
           <p></p>
         </Row>
         <Row>
+          <p></p>
+        </Row>
+        <Row>
+          <p></p>
+        </Row>
+        <Row>
           <Col sm={2}>
             <img src={require('../../img/Grey.png')} alt="logo" className="roecar" />
             <p>007</p>

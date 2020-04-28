@@ -1,7 +1,6 @@
 .sticky-offset {
   top: 56px;
   animation: moveDown 0.5s ease-in-out;
-  
 }
 
 @keyframes moveDown {
@@ -13,85 +12,74 @@
   }
 }
 
-.btnAbout{
-    /* position: absolute;
+.btnAbout {
+  /* position: absolute;
     /* top: 90%; */
-    /* position: bottom; */
-    /* float: right;
+  /* position: bottom; */
+  /* float: right;
     bottom: auto;
     margin-bottom: 10px; */
-    position: absolute;
-    right:    0;
-    bottom:   10px;
-  } 
-  
-  .btn-back{
-    float: right;
-    bottom: auto;
-    margin-bottom: 10px;
-    margin-left: 5px;
-  }
-  
-.logo-sp{
-  padding-right: 2px;
-  
+  position: absolute;
+  right: 0;
+  bottom: 10px;
 }
 
+.btn-back {
+  float: right;
+  bottom: auto;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
 
+.logo-sp {
+  padding-right: 10px;
+}
 
-  .kmitl-logo{
-    text-align: center;
-  }
-  
-  .NameDev{
-    text-align: center; 
-  }
-  
-  .dev{
-    width: 100%;
-    padding: 5px;
-    height: 350px;
-   
-  }
-  
-  
-  
-  
-  .roecar{
-    transform: rotate(-180deg);
-   
-  }
-  
-  .Place-logo{
-    width: 100%;
-    padding: 5px;
-    height: 350px;
-    margin-top: 20px;
-  }
-  
-  .place-btn{
-    background-color: white;
-    border: white;
-  }
-  
+.kmitl-logo {
+  text-align: center;
+}
+
+.NameDev {
+  text-align: center;
+}
+
+.dev {
+  width: 100%;
+  padding: 5px;
+  height: 350px;
+}
+
+.roecar {
+  transform: rotate(-180deg);
+}
+
+.Place-logo {
+  width: 100%;
+  padding: 5px;
+  height: 250px;
+  margin-top: 20px;
+}
+
+.place-btn {
+  background-color: white;
+  border: white;
+}
+
 .dropdown-menu.dropdown-menu-right.show {
-    position: absolute;
+  position: absolute;
 }
 
-
-.No-car{
+.No-car {
   margin-bottom: 0;
   text-align: center;
 }
 
-
-
 .no-gutter [class*='col-'] {
-  padding-right:0;
-  padding-left:0;
+  padding-right: 0;
+  padding-left: 0;
 }
 
-.gap{
+.gap {
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -105,3 +93,20 @@
     padding-left: 0;
   }
 } */
+
+.navbar-brand{
+  font-size: 22px !important;
+}
+
+.footer{
+
+}
+
+.bg-light{
+  background-color: lightcyan;
+}
+
+.Beforeft-home{
+  background-color: #343A40;
+  height: 200px;
+}

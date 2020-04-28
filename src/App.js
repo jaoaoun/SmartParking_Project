@@ -6,6 +6,7 @@ import Place1 from './components/page/Place1'
 import Place2 from './components/page/Place2'
 import AboutUs from './components/page/AboutUs'
 import HeaderBar from './components/layout/HeaderBar'
+import FooterHome from './components/layout/FooterHome'
 
 function App() {
   return (
@@ -25,8 +26,9 @@ function App() {
             <AboutUs />
           </Route>
           <Route path="/">
-            <HeaderBar />
-            <Home />
+            <HeaderBar key="1" />
+            <Home key="3" />
+            <FooterHome key="2"/>
           </Route>
         </Switch>
       </div>

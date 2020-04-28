@@ -79,8 +79,8 @@ export const HeaderBar = () => {
     <div>
       <Navbar color="dark" dark expand="md"  sticky="top" >
       {/* <img src={require('../../img/logo.png')} width="30" height="30" class="d-inline-block align-top" alt="logo" className="logo-sp" /> */}
-        <NavbarBrand color="dark" href="/">
-        <img src={require('../../img/logonew.png')} width="60" height="30" class="d-inline-block align-top" alt="logo" className="logo-sp" />
+        <NavbarBrand color="dark" href="/" >
+        <img src={require('../../img/logonew.png')} width="45" height="30" class="d-inline-block align-top" alt="logo" className="logo-sp" />
           SmartParking
         </NavbarBrand>
         {showPlacesbar && <NavbarToggler onClick={toggle} />}

@@ -1,3 +1,18 @@
+.sticky-offset {
+  top: 56px;
+  animation: moveDown 0.5s ease-in-out;
+  
+}
+
+@keyframes moveDown {
+  from {
+    transform: translateY(-5rem);
+  }
+  to {
+    transform: translateY(0rem);
+  }
+}
+
 .btnAbout{
     /* position: absolute;
     /* top: 90%; */
@@ -17,7 +32,13 @@
     margin-left: 5px;
   }
   
+.logo-sp{
+  padding-right: 2px;
   
+}
+
+
+
   .kmitl-logo{
     text-align: center;
   }
@@ -57,9 +78,22 @@
     position: absolute;
 }
 
+
 .No-car{
   margin-bottom: 0;
   text-align: center;
+}
+
+
+
+.no-gutter [class*='col-'] {
+  padding-right:0;
+  padding-left:0;
+}
+
+.gap{
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 /* .row.no-gutters {

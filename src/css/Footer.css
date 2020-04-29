@@ -1,7 +1,7 @@
 .footer {
    
     bottom: 0px;
-    position: fixed;
+    position: relative;
     width: -webkit-fill-available;
     padding-bottom: 0;
     padding-top: 0;
@@ -16,7 +16,6 @@
 .img-footer{
     height: 60px;
       width: auto;
-      cursor: pointer;
       margin-bottom: 1rem;
   }
 
@@ -24,6 +23,7 @@
     color: #24292e;
     font-weight: bold;
     font-size: 20px;
+    margin-bottom: 0px;
 }
 
 .copyright{

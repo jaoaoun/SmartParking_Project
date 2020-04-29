@@ -1,0 +1,42 @@
+.footer {
+   
+    bottom: 0px;
+    position: fixed;
+    width: -webkit-fill-available;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.img-download{
+    height: 50px;
+      width: auto;
+      cursor: pointer;
+  }
+  
+.img-footer{
+    height: 60px;
+      width: auto;
+      cursor: pointer;
+      margin-bottom: 1rem;
+  }
+
+.text-footer{
+    color: #24292e;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.copyright{
+    font-size: 15px;
+    color:lightgray;
+}
+
+.div-footer{
+    margin-top: 2px;
+    margin-bottom: 0;
+}
+
+.hr-footer{
+    margin-top: 1px;
+    margin-bottom: 1px;
+}

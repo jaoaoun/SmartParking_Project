@@ -1,5 +1,4 @@
 .footer {
-   
     bottom: 0px;
     position: relative;
     width: -webkit-fill-available;
@@ -10,13 +9,12 @@
 .img-download{
     height: 50px;
       width: auto;
-      cursor: pointer;
   }
   
 .img-footer{
     height: 60px;
-      width: auto;
-      margin-bottom: 1rem;
+    width: auto;
+    margin-bottom: 1rem;
   }
 
 .text-footer{
@@ -24,11 +22,12 @@
     font-weight: bold;
     font-size: 20px;
     margin-bottom: 0px;
+    padding-top: 10px;
 }
 
 .copyright{
     font-size: 15px;
-    color:lightgray;
+    color: #778899;
 }
 
 .div-footer{
@@ -39,4 +38,9 @@
 .hr-footer{
     margin-top: 1px;
     margin-bottom: 1px;
+}
+
+.borderfooter{
+    margin-top: 20px;
+    bottom: 0px;
 }

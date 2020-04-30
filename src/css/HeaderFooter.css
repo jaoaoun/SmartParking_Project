@@ -1,0 +1,81 @@
+/* Header */
+/* Button AboutUs */
+.btnAbout .front {
+    position: fixed !important;
+    right: 0 !important;
+    bottom: 10px !important;
+    z-index: 1 ;
+  }
+  /* Logo in NavbarBrand */
+  .logo-sp {
+    padding-right: 10px;
+  }
+  /* Font in NavbarBrand */
+  .navbar-brand {
+    font-size: 22px !important;
+  }
+  /* Navbar sticky */
+  .sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+  /* Dropdown in Navbar */
+  .dropdown-menu.dropdown-menu-right.show {
+    position: absolute;
+  }
+  
+  /* Div-navbar */
+  .d-nav{
+    margin-bottom: 80px;
+  }
+  
+
+/* FooterHome */
+.footer {
+    position: fixed;
+    bottom: 0px ;
+    width: -webkit-fill-available;
+    padding-bottom: 0;
+    padding-top: 0;
+    z-index: 0;
+  }
+  
+  .img-footerhome {
+    height: 100px;
+    width: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .text-footer {
+    color: #24292e;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .copyright {
+    font-size: 15px;
+    color: #778899;
+    margin-bottom: 0;
+  }
+  
+  .div-footer {
+    margin-top: 2px;
+    margin-bottom: 0;
+  }
+  
+  .hr-footer {
+    margin-top: 1px;
+    margin-bottom: 1px;
+  }
+
+  /* Card */
+  .cardimg-download{
+    height: 50px;
+      width: auto;
+  }
+  .text-white{
+      font-size: 20px;
+  }
+  

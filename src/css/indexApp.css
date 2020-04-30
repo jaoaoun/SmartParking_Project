@@ -1,88 +1,83 @@
-.sticky-offset {
-  top: 56px;
-  animation: moveDown 0.5s ease-in-out;
-}
+/* Page HeaderBar */
 
-@keyframes moveDown {
-  from {
-    transform: translateY(-5rem);
-  }
-  to {
-    transform: translateY(0rem);
-  }
-}
-
+/* Button AboutUs */
 .btnAbout {
-  /* position: absolute;
-    /* top: 90%; */
-  /* position: bottom; */
-  /* float: right;
-    bottom: auto;
-    margin-bottom: 10px; */
-  position: absolute;
-  right: 0;
-  bottom: 10px;
+  position: fixed !important;
+  right: 0 !important;
+  bottom: 22% !important;
 }
-
-.btn-back {
-  float: right;
-  bottom: auto;
-  margin-bottom: 10px;
-  margin-left: 5px;
-}
-
+/* Logo in NavbarBrand */
 .logo-sp {
   padding-right: 10px;
 }
-
-.kmitl-logo {
-  text-align: center;
+/* Font in NavbarBrand */
+.navbar-brand {
+  font-size: 22px !important;
+}
+/* Navbar sticky */
+.sticky-top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+/* Dropdown in Navbar */
+.dropdown-menu.dropdown-menu-right.show {
+  position: absolute;
 }
 
-.NameDev {
-  text-align: center;
-}
-
-.dev {
-  width: 100%;
-  padding: 5px;
-  height: 350px;
-}
-
-.roecar {
-  transform: rotate(-180deg);
-}
-
+/* Page Home */
+/* img Place */
 .Place-logo {
   width: 100%;
   padding: 5px;
   height: 250px;
   margin-top: 20px;
 }
-
+/* Button place */
 .place-btn {
   background-color: white;
   border: white;
 }
 
-.dropdown-menu.dropdown-menu-right.show {
-  position: absolute;
+/* Page AboutUs */
+/* KNITL Logo */
+.kmitl-logo {
+  text-align: center;
+}
+/* Content related about team : Name,position */
+.NameDev {
+  text-align: center;
+}
+/* img-person of team */
+.dev {
+  width: 100%;
+  padding: 5px;
+  height: 350px;
 }
 
+/* Page Place1&Place2 */
+/* Rotate img car */
+.roecar {
+  transform: rotate(-180deg);
+}
+/* Number of car */
 .No-car {
   margin-bottom: 0;
   text-align: center;
 }
-
+/* Remove gap between img car */
 .no-gutter [class*='col-'] {
   padding-right: 0;
   padding-left: 0;
+  margin: -1.5px;
 }
-
+/* Gap between Row of car */
 .gap {
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
+
 
 /* .row.no-gutters {
   margin-right: 0;
@@ -94,19 +89,7 @@
   }
 } */
 
-.navbar-brand{
-  font-size: 22px !important;
-}
-
-.footer{
-
-}
-
-.bg-light{
-  background-color: lightcyan;
-}
-
-.Beforeft-home{
-  background-color: #343A40;
-  height: 200px;
-}
+/* .nav-sticky{
+  position: -webkit-sticky;
+  position: sticky; top: 0px;
+} */

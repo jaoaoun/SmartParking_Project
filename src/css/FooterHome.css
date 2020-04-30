@@ -1,6 +1,6 @@
 .footer {
-  bottom: 0px;
-  position: relative;
+  position: absolute;
+  bottom: 0px ;
   width: -webkit-fill-available;
   padding-bottom: 0;
   padding-top: 0;
@@ -21,7 +21,7 @@
 
 .copyright {
   font-size: 15px;
-  color: lightgray;
+  color: #778899;
 }
 
 .div-footer {

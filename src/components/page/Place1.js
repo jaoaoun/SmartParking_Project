@@ -24,24 +24,24 @@ export const Place1 = () => {
           <h1>Place1</h1>
         </Row>
         <div className="row no-gutter justify-content-center">
-        <Row  >
-          <Col  sm={2} align="center">
+        <Row>
+          <Col sm={2} align="center">
             <p className="No-car">001</p>
             <img src={require('../../img/Grey.png')} alt="logo" />
           </Col>
-          <Col  sm={2} align="center">
+          <Col sm={2} align="center">
             <p className="No-car">002</p>
             <img src={require('../../img/Grey.png')} alt="logo" />
           </Col>
-          <Col  sm={2} align="center">
+          <Col sm={2} align="center">
             <p className="No-car">003</p>
             <img src={require('../../img/Grey.png')} alt="logo" />
           </Col>
-          <Col  sm={2} align="center">
+          <Col sm={2} align="center">
             <p className="No-car">004</p>
             <img src={require('../../img/Grey.png')} alt="logo" />
           </Col>
-          <Col  sm={2} align="center">
+          <Col sm={2} align="center">
             <p className="No-car">005</p>
             <img src={require('../../img/Grey.png')} alt="logo" />
           </Col>

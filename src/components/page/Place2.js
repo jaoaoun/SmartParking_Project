@@ -47,10 +47,9 @@ export const Place2 = () => {
           </Col>
         </Row>
         </div>
-        <div>
-        <Row className="gap">
-        </Row>
-        </div>
+  
+        <Row className="gap"/>
+
         <div className="row no-gutter justify-content-center">
         <Row>
           <Col  sm={2} align="center">

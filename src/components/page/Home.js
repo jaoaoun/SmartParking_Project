@@ -22,12 +22,12 @@ export const Home = () => {
             })
   }, [])
 
-  const _placeList = () => {{/* <Image source={{ uri: img }} /> */}
+  const _placeList = () => {
     return arrangePlace.map(({ img, name }, index) => (
          <Col key={index}>
         <button className="place-btn" onClick={() => push(`./Place${index+1}`)}>
           <img src={`${img}`} alt="logo" className="Place-logo" />
-          <p align="center">{`${name}`}{` !พี่อ้วน format code(alt+shift+F) ก่อนcommitด้วยนะงับ!`}</p>
+          <p align="center">{`${name}`}</p>
         </button>
         </Col>
     ))
@@ -39,13 +39,7 @@ export const Home = () => {
         <Row>
             <_placeList/>
         </Row>
-            {/* <div>
-              <button className="place-btn" onClick={Place2Click}>
-                <img src={require('../../img/P2.jpg')} alt="logo" className="Place-logo" />
-              </button>
-              <p align="center">Place2</p>
-            </div> */}
-</Container>
+      </Container>
     </div>
   )
 }

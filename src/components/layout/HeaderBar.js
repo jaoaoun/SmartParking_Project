@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import '../../css/indexApp.css'
+// import '../../css/indexApp.css'
+import '../../css/HeaderFooter.css'
 import { useHistory } from 'react-router'
 import { useLocation } from 'react-router-dom'
 import {
@@ -12,8 +13,10 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  Button
+  Button,
+  Container
 } from 'reactstrap'
+
 
 export const HeaderBar = () => {
   const { push } = useHistory()
@@ -77,10 +80,17 @@ export const HeaderBar = () => {
 
   return (
     <div>
-      <Navbar color="dark" dark expand="md"  sticky="top" >
-      {/* <img src={require('../../img/logo.png')} width="30" height="30" class="d-inline-block align-top" alt="logo" className="logo-sp" /> */}
-        <NavbarBrand color="dark" href="/" >
-        <img src={require('../../img/logonew.png')} width="45" height="30" class="d-inline-block align-top" alt="logo" className="logo-sp" />
+      <div className="d-nav">
+      <Navbar color="dark" dark expand="md" className="fixed-top">
+        <NavbarBrand color="dark" href="/">
+          <img
+            src={require('../../img/logonew.png')}
+            width="45"
+            height="30"
+            class="d-inline-block align-top"
+            alt="logo"
+            className="logo-sp"
+          />
           SmartParking
         </NavbarBrand>
         {showPlacesbar && <NavbarToggler onClick={toggle} />}
@@ -91,8 +101,8 @@ export const HeaderBar = () => {
                 <DropdownToggle nav caret className="ml-auto">
                   {namePlaces}
                 </DropdownToggle>
-                <DropdownMenu right >
-                  {showPlace1 && <DropdownItem  onClick={Place1Click}>Place 1</DropdownItem>}
+                <DropdownMenu right>
+                  {showPlace1 && <DropdownItem onClick={Place1Click}>Place 1</DropdownItem>}
                   {showPlace2 && <DropdownItem onClick={Place2Click}>Place 2</DropdownItem>}
                 </DropdownMenu>
               </UncontrolledDropdown>
@@ -100,13 +110,19 @@ export const HeaderBar = () => {
           </Collapse>
         )}
       </Navbar>
-
+      </div>
+      
       {showBtnAbout && (
-        <div>
-          <Button className="btnAbout" onClick={AboutusClick}>
-            About Us
-          </Button>
+        
+          <div className="btnAbout">
+          <Container>
+            <Button className="front" onClick={AboutusClick}>
+              About Us
+            </Button>
+          </Container>
         </div>
+       
+        
       )}
     </div>
   )

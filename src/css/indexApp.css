@@ -1,10 +1,10 @@
 /* Page HeaderBar */
 
 /* Button AboutUs */
-.btnAbout {
+.btnAbout .front {
   position: fixed !important;
   right: 0 !important;
-  bottom: 22% !important;
+  bottom: 0 !important;
 }
 /* Logo in NavbarBrand */
 .logo-sp {
@@ -23,6 +23,11 @@
 /* Dropdown in Navbar */
 .dropdown-menu.dropdown-menu-right.show {
   position: absolute;
+}
+
+/* Div-navbar */
+.d-nav{
+  margin-bottom: 80px;
 }
 
 /* Page Home */

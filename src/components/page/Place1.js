@@ -34,7 +34,7 @@ export const Place1 = () => {
             <div class="d-flex justify-content-center">
               <Iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15503.40165234832!2d100.7723961!3d13.7275048!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd2e8705e1eebfc3e!2z4Lit4Liy4LiE4Liy4LijIDEyIOC4iuC4seC5ieC4mSDguKrguJbguLLguJrguLHguJnguYDguJfguITguYLguJnguYLguKXguKLguLXguJ7guKPguLDguIjguK3guKHguYDguIHguKXguYnguLLguYDguIjguYnguLLguITguLjguJPguJfguKvguLLguKPguKXguLLguJTguIHguKPguLDguJrguLHguIc!5e0!3m2!1sth!2sth!4v1588334447113!5m2!1sth!2sth"
-                width="600"
+                width="800"
                 height="450"
                 frameborder="0"
                 allowfullscreen=""

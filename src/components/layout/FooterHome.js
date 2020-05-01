@@ -1,6 +1,6 @@
 import React from 'react'
 import '../../css/HeaderFooter.css'
-import { Container, Card, CardBody, CardTitle, CardSubtitle, CardContent, Row, Col } from 'reactstrap'
+import { Container, Card, CardBody, CardTitle, CardSubtitle, Row, Col } from 'reactstrap'
 
 export const FooterHome = () => {
   return (

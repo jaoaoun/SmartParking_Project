@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 // import '../../css/indexApp.css'
 import '../../css/HeaderFooter.css'
 import { useHistory } from 'react-router'
@@ -33,7 +33,7 @@ export const HeaderBar = () => {
   const [showBtnAbout, setShowBtnAbout] = useState(null)
   const [namePlaces, setNamePlaces] = useState('Places')
 
-  const checkPage = () => {
+  const checkPage = useCallback(() => {
     if (location.pathname === '/') {
       setShowBtnAbout(true)
       setShowPlacesbar(false)
@@ -51,11 +51,11 @@ export const HeaderBar = () => {
       setNamePlaces('Place2')
       setShowPlace1(true)
     }
-  }
+  },[location.pathname])
 
   useEffect(() => {
     checkPage()
-  }, [location.pathname])
+  }, [checkPage])
 
   const AboutusClick = () => {
     push('./AboutUs')

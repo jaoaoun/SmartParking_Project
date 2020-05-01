@@ -14,8 +14,6 @@ function App() {
     <Router>
       <div>
         <Switch>
-
-          
           <Route path="/Place2">
             <HeaderBar />
             <Place2 />

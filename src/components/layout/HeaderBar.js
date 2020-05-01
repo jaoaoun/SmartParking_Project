@@ -17,7 +17,6 @@ import {
   Container
 } from 'reactstrap'
 
-
 export const HeaderBar = () => {
   const { push } = useHistory()
   const location = useLocation()
@@ -51,7 +50,7 @@ export const HeaderBar = () => {
       setNamePlaces('Place2')
       setShowPlace1(true)
     }
-  },[location.pathname])
+  }, [location.pathname])
 
   useEffect(() => {
     checkPage()
@@ -81,48 +80,45 @@ export const HeaderBar = () => {
   return (
     <div>
       <div className="d-nav">
-      <Navbar color="dark" dark expand="md" className="fixed-top">
-        <NavbarBrand color="dark" href="/">
-          <img
-            src={require('../../img/logonew.png')}
-            width="45"
-            height="30"
-            class="d-inline-block align-top"
-            alt="logo"
-            className="logo-sp"
-          />
-          SmartParking
-        </NavbarBrand>
-        {showPlacesbar && <NavbarToggler onClick={toggle} />}
-        {showPlacesbar && (
-          <Collapse isOpen={isOpen} navbar>
-            <Nav navbar className="ml-auto">
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret className="ml-auto">
-                  {namePlaces}
-                </DropdownToggle>
-                <DropdownMenu right>
-                  {showPlace1 && <DropdownItem onClick={Place1Click}>Place 1</DropdownItem>}
-                  {showPlace2 && <DropdownItem onClick={Place2Click}>Place 2</DropdownItem>}
-                </DropdownMenu>
-              </UncontrolledDropdown>
-            </Nav>
-          </Collapse>
-        )}
-      </Navbar>
+        <Navbar color="dark" dark expand="md" className="fixed-top">
+          <NavbarBrand color="dark" href="/">
+            <img
+              src={require('../../img/logonew.png')}
+              width="45"
+              height="30"
+              class="d-inline-block align-top"
+              alt="logo"
+              className="logo-sp"
+            />
+            SmartParking
+          </NavbarBrand>
+          {showPlacesbar && <NavbarToggler onClick={toggle} />}
+          {showPlacesbar && (
+            <Collapse isOpen={isOpen} navbar>
+              <Nav navbar className="ml-auto">
+                <UncontrolledDropdown nav inNavbar>
+                  <DropdownToggle nav caret className="ml-auto">
+                    {namePlaces}
+                  </DropdownToggle>
+                  <DropdownMenu right>
+                    {showPlace1 && <DropdownItem onClick={Place1Click}>Place 1</DropdownItem>}
+                    {showPlace2 && <DropdownItem onClick={Place2Click}>Place 2</DropdownItem>}
+                  </DropdownMenu>
+                </UncontrolledDropdown>
+              </Nav>
+            </Collapse>
+          )}
+        </Navbar>
       </div>
-      
+
       {showBtnAbout && (
-        
-          <div className="btnAbout">
+        <div className="btnAbout">
           <Container>
             <Button className="front" onClick={AboutusClick}>
               About Us
             </Button>
           </Container>
         </div>
-       
-        
       )}
     </div>
   )

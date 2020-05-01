@@ -22,7 +22,7 @@ export const Home = () => {
             })
   }, [])
 
-  const _placeList = () => {
+  const placeList = () => {
     return arrangePlace.map(({ img, name }, index) => (
          <Col key={index}>
         <button className="place-btn" onClick={() => push(`./Place${index+1}`)}>
@@ -37,7 +37,7 @@ export const Home = () => {
     <div>
       <Container>
         <Row>
-            <_placeList/>
+          {placeList()}
         </Row>
       </Container>
     </div>

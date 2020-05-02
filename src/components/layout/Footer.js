@@ -20,8 +20,12 @@ export const Footer = () => {
               </div>
               <div>
                 <Col className="ml-auto">
-                  <img src={require('../../img/kmi.jpg')} alt="logo" className="img-footer" />
-                  <img src={require('../../img/ite-logo.png')} alt="logo" className="img-footer" />
+                  <button className="border-0" onClick={() => window.open('http://www.kmitl.ac.th/', '_blank')}>
+                    <img src={require('../../img/kmi.jpg')} alt="logo" className="img-footer" />
+                  </button>
+                  <button className="border-0" onClick={() => window.open('https://ite.kmitl.ac.th/', '_blank')}>
+                    <img src={require('../../img/ite-logo.png')} alt="logo" className="img-footer" />
+                  </button>
                 </Col>
               </div>
             </Row>

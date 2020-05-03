@@ -38,12 +38,12 @@ export const FooterHome = () => {
             <Container>
               <div align="center">
                 <span>
-                  <button className="border-0" onClick={() => window.open('http://www.kmitl.ac.th/', '_blank')}>
+                  <a href="http://www.kmitl.ac.th/" target="_blank">
                     <img src={require('../../img/kmi.jpg')} alt="logo" className="img-footerhome" />
-                  </button>
-                  <button className="border-0" onClick={() => window.open('https://ite.kmitl.ac.th/', '_blank')}>
+                  </a>
+                  <a href="https://ite.kmitl.ac.th/" target="_blank">
                     <img src={require('../../img/ite-logo.png')} alt="logo" className="img-footerhome" />
-                  </button>
+                  </a>
                 </span>
               </div>
             </Container>

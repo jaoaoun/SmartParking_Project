@@ -42,12 +42,12 @@ export const HeaderBar = () => {
     } else if (location.pathname === '/Place1') {
       setShowBtnAbout(true)
       setShowPlacesbar(true)
-      setNamePlaces('Place1')
+      setNamePlaces('Convention Hall')
       setShowPlace2(true)
     } else {
       setShowBtnAbout(true)
       setShowPlacesbar(true)
-      setNamePlaces('Place2')
+      setNamePlaces('12 Building Floor')
       setShowPlace1(true)
     }
   }, [location.pathname])
@@ -101,8 +101,8 @@ export const HeaderBar = () => {
                     {namePlaces}
                   </DropdownToggle>
                   <DropdownMenu right>
-                    {showPlace1 && <DropdownItem onClick={Place1Click}>Place 1</DropdownItem>}
-                    {showPlace2 && <DropdownItem onClick={Place2Click}>Place 2</DropdownItem>}
+                    {showPlace1 && <DropdownItem onClick={Place1Click}>Convention Hall</DropdownItem>}
+                    {showPlace2 && <DropdownItem onClick={Place2Click}>12 Building Floor</DropdownItem>}
                   </DropdownMenu>
                 </UncontrolledDropdown>
               </Nav>

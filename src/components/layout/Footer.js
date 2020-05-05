@@ -1,7 +1,6 @@
 import React from 'react'
 import '../../css/Footer.css'
 import { Container, Row, Col } from 'reactstrap'
-import { Link } from 'react-router-dom'
 
 export const Footer = () => {
   return (

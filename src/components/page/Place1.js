@@ -15,9 +15,9 @@ export const Place1 = () => {
       return 'Grey'
     }
   }
-
+ 
   const fetchingSensor = useCallback(async () => {
-    let sensor = await axios.get(`http://34.87.153.90:5000/sensor/`)
+    let sensor = await axios.get(`${process.env.REACT_APP_SERVER_URI}`)
     setCarPark(sensor.data)
   }, [])
 

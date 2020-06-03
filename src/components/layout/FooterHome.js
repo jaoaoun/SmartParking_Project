@@ -1,6 +1,7 @@
 import React from 'react'
 import '../../css/HeaderFooter.css'
 import { Container, Card, CardBody, CardTitle, CardSubtitle, Row, Col } from 'reactstrap'
+import apk from '../../file/Smart-Parking-1.0.apk'
 
 export const FooterHome = () => {
   return (
@@ -12,20 +13,30 @@ export const FooterHome = () => {
             <CardSubtitle className="text-white pb-3">Download Now! Smart Parking Mobile App.</CardSubtitle>
             <Row align="center">
               <Col>
-                <div>
-                  <Card className="contentApp">
-                    <CardTitle>IOS</CardTitle>
-                    <img src={require('../../img/Apple.png')} alt="logo" className="cardimg-download" />
-                  </Card>
-                </div>
+                <Card className="contentApp">
+                  <CardTitle>IOS</CardTitle>
+                  <p>
+                    You can scan this QR code with your{' '}
+                    <a
+                      href="https://itunes.apple.com/app/apple-store/id982107779"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Expo mobile app
+                    </a>{' '}
+                    to load this.
+                  </p>
+                  <div><img src={require('../../img/apple.jpg')} alt="logo" /></div>
+                </Card>
               </Col>
               <Col>
-                <div>
-                  <Card className="contentApp">
-                    <CardTitle>Andriod</CardTitle>
-                    <img src={require('../../img/Playapp.png')} alt="logo" className="cardimg-download" />
-                  </Card>
-                </div>
+                <Card className="contentApp">
+                  <CardTitle>Andriod</CardTitle>
+                  Direct download .apk file
+                  <a href={apk} target="_blank" download rel="noopener noreferrer">
+                    <img src={require('../../img/android.png')} alt="logo" />
+                  </a>
+                </Card>
               </Col>
             </Row>
           </CardBody>
@@ -38,10 +49,10 @@ export const FooterHome = () => {
             <Container>
               <div align="center">
                 <span>
-                  <a href="http://www.kmitl.ac.th/" target="_blank">
+                  <a href="http://www.kmitl.ac.th/" target="_blank" rel="noopener noreferrer">
                     <img src={require('../../img/kmi.jpg')} alt="logo" className="img-footerhome" />
                   </a>
-                  <a href="https://ite.kmitl.ac.th/" target="_blank">
+                  <a href="https://ite.kmitl.ac.th/" target="_blank" rel="noopener noreferrer">
                     <img src={require('../../img/ite-logo.png')} alt="logo" className="img-footerhome" />
                   </a>
                 </span>

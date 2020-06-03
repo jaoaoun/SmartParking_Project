@@ -20,10 +20,10 @@ export const Footer = () => {
               </div>
               <div>
                 <Col className="ml-auto">
-                  <a href="http://www.kmitl.ac.th/" target="_blank">
+                  <a href="http://www.kmitl.ac.th/" target="_blank" rel="noopener noreferrer">
                     <img src={require('../../img/kmi.jpg')} alt="logo" className="img-footer" />
                   </a>
-                  <a href="https://ite.kmitl.ac.th/" target="_blank">
+                  <a href="https://ite.kmitl.ac.th/" target="_blank" rel="noopener noreferrer">
                     <img src={require('../../img/ite-logo.png')} alt="logo" className="img-footer" />
                   </a>
                 </Col>

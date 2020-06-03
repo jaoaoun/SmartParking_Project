@@ -20,12 +20,15 @@ export const Home = () => {
         )
         setArrangePlace(filteredArrangePlace)
       })
-  }, [])
+    }, [])
 
+  const handlePlace = (name,index) => () => {
+    push('./Place'+(index+1),{Place: name})
+  }
   const placeList = () => {
     return arrangePlace.map(({ img, name }, index) => (
       <Col key={index}>
-        <button className="place-btn" onClick={() => push(`./Place${index + 1}`)}>
+        <button className="place-btn" onClick={handlePlace(name,index)}>
           <img src={`${img}`} alt="logo" className="Place-logo" />
           <p align="center">{`${name}`}</p>
         </button>

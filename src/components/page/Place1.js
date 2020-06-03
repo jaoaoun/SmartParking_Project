@@ -3,10 +3,13 @@ import '../../css/indexApp.css'
 import { Container, Row, Col, Card, CardBody, CardHeader } from 'reactstrap'
 import axios from 'axios'
 import Iframe from 'react-iframe'
+import { useLocation } from 'react-router-dom'
 
 export const Place1 = () => {
   const [carPark, setCarPark] = useState([])
-  const parkReport = (num) => {
+  const location = useLocation()
+  const state = location.state
+  const parkReport = useCallback((num) => {
     if (carPark[num] === 0) {
       return 'Red'
     } else if (carPark[num] === 1) {
@@ -14,17 +17,17 @@ export const Place1 = () => {
     } else {
       return 'Grey'
     }
-  }
- 
+  }, [carPark])
+
   const fetchingSensor = useCallback(async () => {
-    let sensor = await axios.get(`${process.env.REACT_APP_SERVER_URI}`)
+    let sensor = await axios.get(`${process.env.REACT_APP_SERVER_URI}/${state.Place}`)
     setCarPark(sensor.data)
-  }, [])
+  }, [state.Place])
 
   useEffect(() => {
     setTimeout(() => {
       fetchingSensor()
-    }, 4000)
+    }, 5000)
     parkReport()
   }, [fetchingSensor, parkReport])
 
@@ -32,7 +35,7 @@ export const Place1 = () => {
     <div>
       <Container>
         <Row>
-          <h1>Convention Hall</h1>
+          <h1>{state.Place}</h1>
         </Row>
         <div className="row no-gutter justify-content-center">
           <Row>
@@ -50,11 +53,11 @@ export const Place1 = () => {
             </Col>
             <Col sm={2.4} align="center">
               <p className="No-car">004</p>
-              <img src={require('../../img/Grey.png')} alt="logo" />
+              <img src={require(`../../img/${parkReport(3)}.png`)} alt="logo" />
             </Col>
             <Col sm={2.4} align="center">
               <p className="No-car">005</p>
-              <img src={require('../../img/Grey.png')} alt="logo" />
+              <img src={require(`../../img/${parkReport(4)}.png`)} alt="logo" />
             </Col>
           </Row>
         </div>
@@ -64,23 +67,23 @@ export const Place1 = () => {
         <div className="row no-gutter justify-content-center">
           <Row>
             <Col sm={2.4} align="center">
-              <img src={require('../../img/Grey.png')} alt="logo" className="roecar" />
+              <img src={require(`../../img/${parkReport(5)}.png`)} alt="logo" className="rotateCar" />
               <p className="No-car">006</p>
             </Col>
             <Col sm={2.4} align="center">
-              <img src={require('../../img/Grey.png')} alt="logo" className="roecar" />
+              <img src={require(`../../img/${parkReport(6)}.png`)} alt="logo" className="rotateCar" />
               <p className="No-car">007</p>
             </Col>
             <Col sm={2.4} align="center">
-              <img src={require('../../img/Grey.png')} alt="logo" className="roecar" />
+              <img src={require(`../../img/${parkReport(7)}.png`)} alt="logo" className="rotateCar" />
               <p className="No-car">008</p>
             </Col>
             <Col sm={2.4} align="center">
-              <img src={require('../../img/Grey.png')} alt="logo" className="roecar" />
+              <img src={require(`../../img/${parkReport(8)}.png`)} alt="logo" className="rotateCar" />
               <p className="No-car">009</p>
             </Col>
             <Col sm={2.4} align="center">
-              <img src={require('../../img/Grey.png')} alt="logo" className="roecar" />
+              <img src={require(`../../img/${parkReport(9)}.png`)} alt="logo" className="rotateCar" />
               <p className="No-car">010</p>
             </Col>
           </Row>

@@ -62,7 +62,7 @@ export const FooterHome = () => {
           <hr className="hr-footer"></hr>
           <div align="center">
             <Container>
-              <p className="copyright">Smart Parking Project &copy; 2020 Nattida P. => SRY. All right reserved.</p>
+              <p className="copyright">Smart Parking Project &copy; 2020. All right reserved.</p>
             </Container>
           </div>
         </footer>
